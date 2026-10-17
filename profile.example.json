@@ -1,0 +1,46 @@
+{
+  "_comment": "Copy to profile.json and edit. All regexes are case-insensitive and matched against the job title.",
+  "floor": 5000,
+  "band": 7000,
+  "relevant_min_salary_max": 5000,
+  "max_years": 10,
+  "threshold": 55,
+  "families": [
+    ["Product", "product (manager|owner|lead|director|head)|\\bpm\\b|product management"],
+    ["Program / Operations", "program(me)? manager|project manager|operations|delivery manager"],
+    ["Growth / Marketing", "growth|product marketing|\\bpmm\\b|marketing (director|manager|lead|head)"],
+    ["Business Analysis", "business analyst|product analyst|data analyst"],
+    ["Engineering / Data", "engineer|developer|data scien|machine learning|software|devops|programmer"],
+    ["Sales / BD", "sales|business development|account (manager|executive)|partnership"],
+    ["Finance", "finance|financial|accountant|treasury|controller"],
+    ["People / Admin", "human resource|\\bhr\\b|recruit|admin|legal|compliance"]
+  ],
+  "target_families": ["Product", "Program / Operations", "Business Analysis"],
+  "watchlist_families": ["Product", "Program / Operations", "Business Analysis", "Growth / Marketing", "Other"],
+  "family_bonus": {"Product": 8, "Program / Operations": 3},
+  "negative_title": "intern(ship)?|graduate|trainee|junior|apprentice|clerk|telemarket|retail|nurse|teacher|driver|technician",
+  "boost_keywords": "\\bai\\b|saas|cloud|data platform|fintech|startup",
+  "agency_pattern": "recruit|headhunt|staffing|manpower|executive search|outsourc|workforce|employment agency|human capital",
+  "junior_levels": ["Fresh/entry level", "Junior Executive", "Non-executive"],
+  "senior_levels": ["Manager", "Middle Management", "Senior Management"],
+  "weights": {
+    "base": 55,
+    "salary_band": 10,
+    "salary_high": 5,
+    "high_salary_threshold": 12000,
+    "senior_level": 5,
+    "years_sweet_spot": 5,
+    "years_sweet_spot_range": [3, 7],
+    "boost_keyword": 10,
+    "tier1": 15,
+    "tier2": 10,
+    "agency": -25,
+    "preferred_family": 5
+  },
+  "preferred_families": ["Product"],
+  "watchlist": {
+    "tier1": ["example company a", "example company b"],
+    "tier2": ["example company c"],
+    "agency": ["example staffing pte"]
+  }
+}
